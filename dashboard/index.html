@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soundings / Launch Terminal</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <a href="#launch" class="brand"><span class="mark">◈</span> SOUNDINGS<span class="series">05</span></a>
+    <nav aria-label="Workspaces">
+      <button data-view="launch">Launch book</button><button data-view="universe">Universe</button>
+      <button data-view="validation">Validation</button><button data-view="portfolio">Portfolio</button>
+    </nav>
+    <div class="sealed"><i></i> SEALED SNAPSHOT <span id="date"></span></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><div class="pre">DEFI / PRE-TOKEN MARKETS</div><h1>Launch Terminal</h1></div>
+      <p>Conditional token valuations and costed deposit routes.<br>Every number traces back to the sealed protocol snapshot.</p>
+    </section>
+    <section id="kpis" class="kpis" aria-label="Key metrics"></section>
+    <div id="workspace" class="workspace">
+      <section class="panel book">
+        <div class="panelhead"><div><div class="pre" id="book-kicker"></div><h2 id="book-title"></h2></div><span id="count" class="pill"></span></div>
+        <div class="filters">
+          <label><span>Search</span><input id="search" type="search" placeholder="Name or slug"></label>
+          <label><span>Scope</span><select id="scope"></select></label>
+          <label><span>Sort</span><select id="sort"><option>Implied cap</option><option>Farm net</option><option>TVL</option><option>Risk flags</option></select></label>
+        </div>
+        <div class="tablebox" id="tablebox">
+          <table><thead><tr><th>RK</th><th>PROTOCOL</th><th>TVL</th><th>IMPLIED CAP</th><th>80% RANK</th><th>$1K NET</th></tr></thead><tbody id="rows"></tbody></table>
+        </div>
+        <div class="bookfoot"><a href="../board.json" download>Ranked JSON ↓</a><a href="../universe.json" download>Universe JSON ↓</a><a href="../validation.json" download>Fold logs ↓</a></div>
+      </section>
+      <aside class="panel detail" id="detail" aria-label="Selected protocol"></aside>
+      <aside class="panel audit" id="audit" aria-label="Validation summary"></aside>
+    </div>
+    <section id="extra" hidden></section>
+    <footer><span>SOUNDINGS / RADAR-5</span><span>CAP IN USD · 30-DAY FARM SCENARIO · OFFLINE</span></footer>
+  </main>
+</body>
+</html>
