@@ -8,6 +8,7 @@
   --muted: #a2b5bb;
   --jade: #9bf4c6;
   --amber: #f4c68a;
+  --space: 12px;
   --mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
   font: 14px/1.42 Inter, 'Segoe UI', system-ui, sans-serif;
 }
@@ -43,7 +44,7 @@ h3 { font-size: 14px; margin: 0 0 5px; }
 .metric:last-child { border: 0; }
 .metric small { color: var(--muted); display: block; text-transform: uppercase; }
 .metric strong { color: var(--jade); font: 23px var(--mono); display: block; margin-bottom: 2px; }
-.workspace { display: grid; grid-template-columns: minmax(470px, 1.6fr) minmax(295px, .99fr) minmax(230px, .78fr); gap: 12px; align-items: stretch; }
+.workspace { display: grid; grid-template-columns: minmax(470px, 1.6fr) minmax(295px, .99fr) minmax(230px, .78fr); gap: var(--space); align-items: stretch; }
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; min-width: 0; overflow: hidden; }
 .panelhead { padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--line); }
 .pill { color: var(--jade); background: #18312c; padding: 4px 7px; border-radius: 4px; font: 11px var(--mono); white-space: nowrap; }

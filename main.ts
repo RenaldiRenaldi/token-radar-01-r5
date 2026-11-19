@@ -49,7 +49,9 @@ if (existsSync(captures) && !process.argv.includes('--preview')) {
 }
 
 console.log(JSON.stringify({
-  protocols: data.ledger.length, launch: data.rows.length, model: data.validation.model,
+  protocols: data.ledger.length, launch: data.rows.length,
+  watchlistCovered: data.rows.filter(row => row.watch).length,
+  model: data.validation.model,
   loo: data.validation.loo, dated: data.validation.replay.windows.map(w => ({year: w.year, n: w.n, median: w.median, hits: w.hits})),
   refits: data.validation.refits, leaders: data.rows.slice(0, 5).map(r => ({slug: r.slug, range: r.stability?.rank80})),
 }));

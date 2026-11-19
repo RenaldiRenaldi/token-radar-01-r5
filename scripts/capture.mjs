@@ -13,6 +13,7 @@ const browser = await chromium.launch({executablePath: process.env.CHROME_PATH, 
 await mkdir(destination, {recursive:true});
 try {
   const page = await browser.newPage({viewport:{width:1440,height:900}, deviceScaleFactor:1});
+  page.setDefaultTimeout(12000);
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
   await page.route(/^https?:/, route => route.abort());

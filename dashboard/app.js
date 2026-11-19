@@ -31,6 +31,7 @@ function audit() {
     ${stat('Within 3×', pct(V.loo.hits / V.loo.n), 'good')}
     ${stat('Held-out caps', V.loo.n)}
     ${stat('Radar-4 median', '×3.11')}
+    ${stat('Radar-4 within 3×', '59 / 119')}
     <div class="rail" role="img" aria-label="Share within threefold"><b style="width:${100 * V.loo.hits / V.loo.n}%"></b></div>
     <p class="hint">Same comparable rule as Radar-4. Choice of features and fit are repeated inside each fold.</p>
     <div class="rule"><h3>Listing-cohort transfer</h3><p class="hint">30-day gaps. One observation date. This measures transfer across listing cohorts.</p></div>

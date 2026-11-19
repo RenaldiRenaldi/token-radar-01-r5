@@ -103,6 +103,7 @@ function steps(p: Protocol, f: ReturnType<typeof farm>) {
 export function build(s: Snapshot) {
   if (!s.protocols?.length || !Number.isFinite(Date.parse(s.as_of))) throw new Error('Unrecognized sealed snapshot');
   const watches = new Set(s.watchlist);
+  // Classification precedes board filtering: every input slug has one ledger row.
   const scoped = s.protocols.map(p => ({p, watch: watches.has(p.slug), ...scope(p, watches.has(p.slug)), risk: exposure(p)}));
   const fit = calibrate(s);
   const replay = cohortReplay(s, fit.anchors);

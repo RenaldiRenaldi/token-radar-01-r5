@@ -142,6 +142,7 @@ function inner(rows: Protocol[]) {
 
 export function calibrate(snapshot: Snapshot) {
   const date = snapshot.as_of;
+  // Keep the declared accuracy comparison population stable across outer folds.
   const comparableSet = snapshot.protocols.filter(comparable);
   const anchors = comparableSet.filter(anchor);
   const folds = comparableSet.map(p => {

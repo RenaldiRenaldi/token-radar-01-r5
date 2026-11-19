@@ -31,6 +31,8 @@ This is a listing-cohort transfer test on current caps and current features. A 3
 
 The model runs 256 fixed-seed token-block bootstrap refits of the selected specification. Sentora Curator spans ranks 1–6 with central 80% ranks 1–3. Steakhouse Financial spans 1–8 with central ranks 1–4. Gauntlet spans 2–24 with central ranks 3–9. Bootstrap ranges measure model stability. Separate signed residual bands show the central 80% of held-out log errors around each point estimate.
 
+Stability belongs to ranks among today's 198 launch candidates. In a bootstrap draw, comparable tokens are resampled as blocks and candidate ordering is recalculated. It is not a posterior probability that a rank is correct.
+
 ## Coverage and farm math
 
 The board ranks 198 launch candidates with all 40 watchlist rows. The universe ledger gives fitted diagnostics, provenance and a cost curve to all 758 protocols, including 119 anchors and 441 quarantined records. Those 560 rows have a skip route and no modeled pre-launch proceeds.
